@@ -5,4 +5,6 @@ https://github.com/nashville-software-school/front-end-milestones/blob/master/5-
 need to install jQuery and Handlebars
 
 bower install jquery
+
+
 bower install handlebars
