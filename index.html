@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Demo</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<h1>HandleBars</h1>
+
+
+<div id="articleOutput"></div>
+
+<script id="article-template" src="" type="text/x-handlerbars-template">  <!-- ////////////////template for handlebars///////// -->
+   <div class="article article__container">
+      <h1>{{title}}</h1>
+      <div class="article__text">
+        {{text}}
+      </div>
+    </div>
+
+    <ul>
+    {{#each tags}}                    <!-- "each" iterates over "tags" which is the array -->
+      <li>{{category}}: {{name}}</li> <!-- //////////These are the keys inside that are part of the object/////// -->
+    {{/each}}                            <!-- closes the iteration -->
+    </ul>
+    {{> social-sharing}}    <!-- ////////this is passing it in as a partial THIS HAS TO MATCH line 13 of JS, must have same now//// -->
+  </script>
+
+  <script id="social-sharing" type="text/x-handlerbars-template">
+    <div class="sharing">
+    <span class="sharing__button">
+  	  <a href="{{site_url}}">{{sitename}}</a>
+    </span>
+  </div>
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
+  <script type="text/javascript" src="javascripts/main.js"></script>
+</body>
+</html>
